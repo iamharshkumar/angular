@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { User } from '../User';
-import { UserRegistrationService } from '../user-registration.service';
+import {Component, OnInit} from '@angular/core';
+import {User} from '../User';
+import {UserRegistrationService} from '../user-registration.service';
 
 @Component({
   selector: 'app-register',
@@ -9,10 +9,11 @@ import { UserRegistrationService } from '../user-registration.service';
 })
 export class RegisterComponent implements OnInit {
 
-  user:User=new User("","","","","");
-  message:any ;
+  user = new User('', '', '', '', '');
+  message: any;
 
-  constructor(private service: UserRegistrationService) { }
+  constructor(private service: UserRegistrationService) {
+  }
 
   ngOnInit() {
   }
