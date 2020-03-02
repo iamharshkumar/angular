@@ -1,0 +1,35 @@
+<div class="background">
+    <div class="content">
+        <div class="text">
+            <span>LOGIN</span>
+        </div>
+        <div class="box">
+            
+<form class="example-form">
+    
+
+      <mat-form-field hintLabel="Min 4 characters" class="example-full-width">
+        <input matInput placeholder="Enter your userName" #userName="ngModel" ngModel name="userName" required minlength="4">
+        <mat-error *ngIf="userName.invalid">Please enter a valid userName</mat-error>
+      </mat-form-field>
+
+
+  <br>
+
+  <mat-form-field class="example-full-width" hintLabel="Min 4 characters">
+      <mat-label>Enter your password</mat-label>
+      <input type="password" matInput placeholder="12345678" required #password="ngModel" ngModel name=password minlength="4">
+      <mat-error *ngIf="password.invalid">Please enter a valid password</mat-error>
+    </mat-form-field>
+
+  <br><br>
+  <button type="submit" mat-raised-button color="primary" (click)="RegisterProcess()">Login</button>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a routerLink="/register" class="btn btn-link" style="font-size: 20px" routerLinkActive="active">Register</a>
+  
+  </form>
+
+  </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>

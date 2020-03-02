@@ -1,0 +1,55 @@
+<div class="background">
+        <div class="content">
+            <div class="text">
+                <span>SIGN UP</span>
+            </div>
+            <div class="box">             
+    <form class="example-form">
+        
+            
+                    
+                    <mat-form-field hintLabel="Min 2 characters" class="example-full-width">
+                          <input matInput minlength="2" placeholder="First Name" #firstName="ngModel" ngModel name="firstName" required>
+                          <mat-error *ngIf="firstName.invalid">Please enter a valid name</mat-error>
+                        </mat-form-field>
+                    
+                    
+                    
+                      <mat-form-field hintLabel="Min 3 characters" class="example-full-width">
+                        <input matInput minlength="3" placeholder="Last Name" #lastName="ngModel" ngModel name="lastName" required>
+                        <mat-error *ngIf="lastName.invalid">Please enter a valid name</mat-error>
+                      </mat-form-field>
+                    
+                    
+                    
+                      <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Enter your email" #email="ngModel" ngModel name="email" required>
+                        <mat-error *ngIf="email.invalid">Please enter a valid email-id</mat-error>
+                      </mat-form-field>
+                    
+                    
+                    
+                        <mat-form-field hintLabel="Min 4 characters" class="example-full-width">
+                          <input matInput placeholder="Enter your userName" #userName="ngModel" ngModel name="userName" required minlength="4">
+                          <mat-error *ngIf="userName.invalid">Please enter a valid userName</mat-error>
+                        </mat-form-field>
+                      
+                  
+                    <br>
+                  
+                    <mat-form-field class="example-full-width" hintLabel="Min 4 characters" class="example-full-width">
+                        <mat-label>Enter your password</mat-label>
+                        <input type="password" matInput placeholder="12345678" required #password="ngModel" ngModel name=password minlength="4">
+                        <mat-error *ngIf="password.invalid">Please enter a valid password</mat-error>
+                      </mat-form-field>
+    
+      <br><br>
+      <button type="submit" mat-raised-button color="primary" (click)="registerProcess()">Sign Up</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a routerLink="/login" class="btn btn-link" style="font-size: 20px" routerLinkActive="active">Already a member ?</a>
+      
+      </form>
+      </div>
+      </div>
+      </div>
+    
